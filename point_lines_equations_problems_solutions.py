@@ -20,29 +20,38 @@ p1= Point(3,4)
 p2= Point(5,6)
 print(p1.euclidean_distance(p2))
 
+#this code find any point lies on the line yes or no
 
-class Line:
 
-  def __init__(self,A,B,C):
+class Line: #create a line class 
+
+  def __init__(self,A,B,C): #create a constructor and pass the cofficient value of line 
     self.A = A
     self.B = B
     self.C = C
 
-  def __str__(self):
+  def __str__(self): #this is magic method for line equtions
     return '{}x + {}y + {} = 0'.format(self.A,self.B,self.C)
 
-  def point_on_line(line,point):
+  def point_on_line(line,point): #this is method for calculted point lies on the point yes or no 
     if line.A*point.x_cod + line.B*point.y_cod + line.C == 0:
       return "lies on the line"
     else:
       return "does not lie on the line"
+    
+  def shortest_distance(line,point):   # this code is calculated shortest distance between line and point 
+    return (line.A*point.x_cod + line.B*point.y_cod + line.C) / (line.A**2 +line.B**2)**0.5
+    
+
 
 
 l1=Line(5,6,3)
 p3=Point(2,6)
 print(l1.point_on_line(p3))
+print(l1.shortest_distance(p3))
+
     
-    
-  
+
+
 
     
