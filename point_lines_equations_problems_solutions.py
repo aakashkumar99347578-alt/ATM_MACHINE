@@ -19,3 +19,30 @@ class Point:
 p1= Point(3,4)
 p2= Point(5,6)
 print(p1.euclidean_distance(p2))
+
+
+class Line:
+
+  def __init__(self,A,B,C):
+    self.A = A
+    self.B = B
+    self.C = C
+
+  def __str__(self):
+    return '{}x + {}y + {} = 0'.format(self.A,self.B,self.C)
+
+  def point_on_line(line,point):
+    if line.A*point.x_cod + line.B*point.y_cod + line.C == 0:
+      return "lies on the line"
+    else:
+      return "does not lie on the line"
+
+
+l1=Line(5,6,3)
+p3=Point(2,6)
+print(l1.point_on_line(p3))
+    
+    
+  
+
+    
