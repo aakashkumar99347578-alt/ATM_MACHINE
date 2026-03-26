@@ -41,15 +41,22 @@ class Line: #create a line class
     
   def shortest_distance(line,point):   # this code is calculated shortest distance between line and point 
     return (line.A*point.x_cod + line.B*point.y_cod + line.C) / (line.A**2 +line.B**2)**0.5
+  
+  def iine_intersect(line,other):
+    if line.A/other.A != line.B/other.B :
+      return "yes both lines intersecting at any point"
+    else :
+      return "no both lines intersecting at any point"
     
 
 
 
 l1=Line(5,6,3)
+l2=Line(6,5,9)
 p3=Point(2,6)
 print(l1.point_on_line(p3))
 print(l1.shortest_distance(p3))
-
+print(l1.iine_intersect(l2))
     
 
 
