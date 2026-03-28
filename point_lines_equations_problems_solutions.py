@@ -20,6 +20,7 @@ p1= Point(3,4)
 p2= Point(5,6)
 print(p1.euclidean_distance(p2))
 
+
 #this code find any point lies on the line yes or no
 
 
@@ -48,8 +49,7 @@ class Line: #create a line class
     else :
       return "no both lines intersecting at any point"
 
-  def distance_between_two_points(self,other):
-    return ((self.x_cod-other.x_cod)**2 + (self.y_cod - other.y_cod)**2)*0.5
+ 
     
 
 
