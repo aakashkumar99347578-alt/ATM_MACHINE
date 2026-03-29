@@ -53,7 +53,7 @@ class Line: #create a line class
     else :
       return "no both lines intersecting at any point"
   
-  def lines_distance(line,other): #this method is find out the distance between two lines 
+  def lines_distance(line,other): #this method is find out the distance between two lines in 2D planes 
     return abs(line.C-other.C)/((line.A)**2+ (other.A)**2)**2
 
 
